@@ -17,7 +17,7 @@ void main()
 	if ((fp = fopen("Alphabet.txt", "r")) == NULL)
 	{
 		printf("Error while document opening..\n");
-		return 1;
+		return;
 	}
 	//-------------------------------------------------
 	//Ucitavanje karaktera i vjerovatnoce pojavljivanja
@@ -30,7 +30,7 @@ void main()
 	fclose(fp);
 
 	if (!checkSum(alphabet, MAX))
-		return 1;
+		return;
 	//-------------------------------------------------
 	//Pravljenje Hofmanovog stabla
 	//-------------------------------------------------
@@ -42,7 +42,7 @@ void main()
 	if ((fp = fopen("AlphabetCode.txt", "w")) == NULL)
 	{
 		printf("Error while document opening..\n");
-		return 1;
+		return;
 	}
 	printCode(fp, tree, arr);
 	fclose(fp);
@@ -63,7 +63,7 @@ void main()
 	if ((fp = fopen("AlphabetCode.txt", "r")) == NULL)
 	{
 		printf("Error while document opening..\n");
-		return 1;
+		return;
 	}
 	i = 0;
 	while (fscanf(fp, "%s", codes[i++]) == 1);
