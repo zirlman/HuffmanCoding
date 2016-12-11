@@ -6,6 +6,8 @@ int isLeaf(NODE* root)
 {
 	return !(root->left) && !(root->right);
 }
+
+// Upisuje putanju do slova u fajl
 void printArr(FILE* fp, char* arr, int n)
 {
 	for (int i = 0; i < n; ++i)
@@ -35,6 +37,7 @@ void printCode(FILE* fp, NODE* root, char* arr)
 
 }
 
+// Pseudo kod sa iz Tomaseviceve knjige za Hofmanov kod
 NODE* buildHuffmanTree(VECTOR* vec, int n)
 {
 	QUEUE* priQueue = 0;
@@ -90,7 +93,6 @@ NODE* del(QUEUE** phead)
 {
 	if (*phead == NULL)
 	{
-		//printf("Red je prazan.\n");
 		return NULL;
 	}
 	else
@@ -103,6 +105,7 @@ NODE* del(QUEUE** phead)
 	}
 }
 
+// Pomocna funkcija koja ispisuje prioritetni red
 void readQ(QUEUE* head)
 {
 	while (head)

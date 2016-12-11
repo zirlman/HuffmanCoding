@@ -32,4 +32,4 @@ NODE* del(QUEUE**);
 void readQ(QUEUE *);
 
 int checkSum(VECTOR*, int);
-void sort(char**);
+void sort(char[][52]);
