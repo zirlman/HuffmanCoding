@@ -59,7 +59,7 @@ void main()
 				B01
 				C000
 				Z001*/
-				//-------------------------------------------------
+	//-------------------------------------------------
 	if ((fp = fopen("AlphabetCode.txt", "r")) == NULL)
 	{
 		printf("Error while document opening..\n");
