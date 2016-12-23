@@ -16,6 +16,7 @@ void writeInorder(NODE*);
 void writePreorder(NODE*);
 void printAll(NODE*);
 int isBalanced(NODE*);
+
 int height(NODE*);
 int maximum(int, int);
 void menu();
