@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX 26
+#define MAX 7
 
 
 typedef struct vektor

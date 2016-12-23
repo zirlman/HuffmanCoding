@@ -37,7 +37,7 @@ void printCode(FILE* fp, NODE* root, char* arr)
 
 }
 
-// Pseudo kod sa iz Tomaseviceve knjige za Hofmanov kod
+// Pseudo kod iz Tomaseviceve knjige za Hofmanov kod
 NODE* buildHuffmanTree(VECTOR* vec, int n)
 {
 	QUEUE* priQueue = 0;
@@ -71,7 +71,7 @@ void add(QUEUE** phead, NODE* z)
 	if (*phead == NULL)
 		*phead = temp;
 	else {
-		if (temp->node->info.value <= (*phead)->node->info.value)
+		if (temp->node->info.value < (*phead)->node->info.value)
 			// onaj sa manjom vr. prioriteta ili manjim vremenom ide na pocetak
 		{
 			temp->next = *phead;
@@ -79,7 +79,7 @@ void add(QUEUE** phead, NODE* z)
 			return;
 		}
 		QUEUE* help = *phead;
-		for (; help->next && (help->next->node->info.value <= temp->node->info.value); help = help->next);
+		for (; help->next && (help->next->node->info.value < temp->node->info.value); help = help->next);
 		if (help->next == NULL)
 		{
 			help->next = temp;

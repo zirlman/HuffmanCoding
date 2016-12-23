@@ -14,7 +14,7 @@ void main()
 
 
 	FILE* fp;
-	if ((fp = fopen("Alphabet.txt", "r")) == NULL)
+	if ((fp = fopen("Zad.txt", "r")) == NULL)
 	{
 		printf("Error while document opening..\n");
 		return;
@@ -39,7 +39,7 @@ void main()
 	//-------------------------------------------------
 	//Upis koda u fajl,jer smo u mogucnosti
 	//-------------------------------------------------
-	if ((fp = fopen("AlphabetCode.txt", "w")) == NULL)
+	if ((fp = fopen("ZadCode.txt", "w")) == NULL)
 	{
 		printf("Error while document opening..\n");
 		return;
@@ -60,7 +60,7 @@ void main()
 				C000
 				Z001*/
 	//-------------------------------------------------
-	if ((fp = fopen("AlphabetCode.txt", "r")) == NULL)
+	if ((fp = fopen("ZadCode.txt", "r")) == NULL)
 	{
 		printf("Error while document opening..\n");
 		return;
