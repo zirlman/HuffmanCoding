@@ -22,6 +22,16 @@ void insertElement(NODE** proot, TIP info)
 	}
 }
 
+void writePreorder(NODE* root)
+{
+	if (root != NULL)
+	{
+		printf("%d ", root->info); // Promijeniti ispis tipa u zavisnosti info sadrzaja
+		writePreorder(root->left);
+		writePreorder(root->right);
+	}
+}
+
 void writeInorder(NODE* root)
 {
 	if (root != NULL)
@@ -33,20 +43,19 @@ void writeInorder(NODE* root)
 
 }
 
-void writePreorder(NODE* root)
+void writePostorder(NODE* root)
 {
 	if (root != NULL)
 	{
-		printf("%d ", root->info); // Promijeniti ispis tipa u zavisnosti info sadrzaja
-		writePreorder(root->left);
-		writePreorder(root->right);
+		writePostorder(root->left);
+		writePostorder(root->right);
+		printf("%d ", root->info);
 	}
 }
 
 void printAll(NODE* root)
 {
-	printf("Tree elements: ");
-	writeInorder(root);
+	writePostorder(root);
 }
 
 int isBalanced(NODE* root)
@@ -86,10 +95,10 @@ void menu()
 		"::                                                ::\n"
 		"::                                                ::\n"
 		"::        MENU:                                   ::\n"
-		"::           1. Insert Element                    ::\n"
+		"::           1. Insert element                    ::\n"
 		"::           2. Write inorder                     ::\n"
 		"::           3. Write preorder                    ::\n"
-		"::           4. Print all                         ::\n"
+		"::           4. Write postorder                   ::\n"
 		"::           5. Balanced tree?                    ::\n"
 		"::           0. Exit                              ::\n"
 		"::                                                ::\n"

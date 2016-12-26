@@ -33,6 +33,7 @@ void main()
 			break;
 		case 4:
 			system("CLS");
+			printf("Postorder traversal: ");
 			printAll(root);
 			break;
 		case 5:

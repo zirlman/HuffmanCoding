@@ -12,8 +12,9 @@ typedef struct node
 
 NODE* newNode(TIP);
 void insertElement(NODE**, TIP);
-void writeInorder(NODE*);
 void writePreorder(NODE*);
+void writeInorder(NODE*);
+void writePostorder(NODE *);
 void printAll(NODE*);
 int isBalanced(NODE*);
 
