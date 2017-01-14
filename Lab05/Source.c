@@ -6,7 +6,7 @@
 
 void main()
 {
-	/*srand(time(NULL));
+	srand(time(NULL));
 	int myNumber, toGuess = rand() % 50;
 	char help;
 	char name[16];
@@ -20,7 +20,7 @@ void main()
 		printf("Enter number: "); scanf("%d", &myNumber);
 		if (myNumber == toGuess)
 		{
-			printf("Congratulations!\nThe number is %d\n", toGuess);
+			printf("Congratulations!\n");
 			break;
 		}
 		attempts[i] = myNumber;
@@ -37,7 +37,7 @@ void main()
 	bubbleSort(attempts, len);
 	if (attempts[0] != 0);
 	{
-		printf("\nBubble sort: ");
+		printf("\n\nBubble sort: ");
 		for (int i = 0; i < len; ++i)
 			if (attempts[i] != 0)
 				printf("%d ", attempts[i]);
@@ -48,14 +48,13 @@ void main()
 			if (attempts[i] != 0)
 				printf("%d ", attempts[i]);
 		printf("\n");
-	}*/
+	}
 
-	int arr[] = { 1,3,5,1,3,2,1 };
-	//countSort(arr, 7, 5);
+	/*int arr[] = { 1,3,5,1,3,2,1 };
 	for (int i = 0; i < 7; ++i)
 		printf("%d ", arr[i]);
 	printf("\nmin: %d\nmax: %d\n", minimum(arr, 7), maximum(arr, 7));
-	printf("4.th min: %d", find(arr, 0, 6, 4));
+	printf("4.th min: %d", find(arr, 0, 6, 4));*/
 	getchar();
 	getchar();
 }

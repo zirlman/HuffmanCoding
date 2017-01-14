@@ -2,6 +2,7 @@
 #include <time.h>
 #include <string.h>
 #include <Windows.h>
+#define _CRT_SECURE_NO_WARNINGS
 
 void main() {
 	int n;

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "Lab02-01.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 void main()
 {

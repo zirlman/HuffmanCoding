@@ -1,6 +1,7 @@
 #include "Lab03.h"
 #include <ctype.h>
 // MAX predstavlja broj karaktera koji se ucitavaju
+#define _CRT_SECURE_NO_WARNINGS
 
 void main()
 {
