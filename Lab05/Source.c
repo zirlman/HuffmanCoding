@@ -6,7 +6,7 @@
 
 void main()
 {
-	srand(time(NULL));
+	/*srand(time(NULL));
 	int myNumber, toGuess = rand() % 50;
 	char help;
 	char name[16];
@@ -48,13 +48,17 @@ void main()
 			if (attempts[i] != 0)
 				printf("%d ", attempts[i]);
 		printf("\n");
-	}
+	}*/
 
-	/*int arr[] = { 1,3,5,1,3,2,1 };
-	for (int i = 0; i < 7; ++i)
+	int arr[] = { 35,63,49,40,5,91,79,33 };
+	quickSort(arr, 0, 7);
+	for (int i = 0; i < 8; ++i)
 		printf("%d ", arr[i]);
-	printf("\nmin: %d\nmax: %d\n", minimum(arr, 7), maximum(arr, 7));
-	printf("4.th min: %d", find(arr, 0, 6, 4));*/
+	printf("\nmin: %d\nmax: %d\n", minimum(arr, 8), maximum(arr, 8));
+	printf("4.th min: %d\n", find(arr, 0, 7, 4));
+	printf("Searching for 0...\n");
+	int r = intSearch(arr, 0, 8);
+	printf("%successful search.\n", r ? "S" : "Uns");
 	getchar();
 	getchar();
 }

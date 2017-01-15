@@ -100,7 +100,7 @@ void countSort(int* arr, const int n, const int k)
 		c[i] += c[i - 1];
 	for (int j = n - 1; j >= 0; --j)
 	{
-		b[c[arr[j]] - 1] = arr[j];
+		b[c[arr[j]] - 1] = arr[j]; // <- !
 		c[arr[j]]--;
 	}
 	for (int i = 0; i < n; ++i)
@@ -155,4 +155,23 @@ int partition(int* arr, const int low, const int high)
 	arr[low] = arr[j];
 	arr[j] = pivot;
 	return j;
+}
+
+int intSearch(int* arr, const int key, const int n)
+{
+	int low, mid, high;
+	low = 0;
+	high = n - 1;
+	while (low <= high)
+	{
+		mid = low + (high - low)*(key - arr[low]) / (arr[high] - arr[low]);
+		if (arr[mid] == key)
+			return arr[mid];
+		else
+			if (arr[mid] < key)
+				low = mid + 1;
+			else
+				high = mid - 1;
+	}
+	return 0;
 }
