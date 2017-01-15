@@ -12,4 +12,6 @@ int minimum(int*, const int);
 int maximum(int*, const int);
 int find(int*, const int, const int, const int);
 int partition(int*, const int, const int);
-int intSearch(int*, const int,const int);
+int intSearch(int*, const int, const int);
+
+void hasher();

@@ -58,7 +58,9 @@ void main()
 	printf("4.th min: %d\n", find(arr, 0, 7, 4));
 	printf("Searching for 0...\n");
 	int r = intSearch(arr, 0, 8);
-	printf("%successful search.\n", r ? "S" : "Uns");
+	printf("%successful search.\n\n", r ? "S" : "Uns");
+
+	hasher();
 	getchar();
 	getchar();
 }

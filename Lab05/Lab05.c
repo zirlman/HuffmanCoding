@@ -1,5 +1,6 @@
 #include "Lab05.h"
 #include <stdlib.h>
+#define MAX 10
 
 void bubbleSort(int *arr, const int n)
 {
@@ -174,4 +175,28 @@ int intSearch(int* arr, const int key, const int n)
 				high = mid - 1;
 	}
 	return 0;
+}
+
+void hasher()
+{
+	int h1, h2, key, j;
+	int arr[10] = { -1,-1,-1,-1,-1,-1,-1,-1,-1,-1 };
+	int toAdd[] = { 18,59,2,13,9,23,50,47 };
+	for (int i = 0; i < 8; ++i)
+	{
+		key = toAdd[i];
+		h1 = key % MAX;
+		h2 = 3 + (key % 4);
+		j = 0;
+		while (arr[h1] != -1 && j < 10)
+		{
+			h1 = (h1 + h2) % MAX;
+			++j;
+		}
+		if (arr[h1] == -1)
+			arr[h1] = key;
+	}
+
+	for (int i = 0; i < MAX; ++i)
+		printf("%2d | %5d\n", i, arr[i] == -1 ? 0 : arr[i]);
 }
